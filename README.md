@@ -1,8 +1,9 @@
-# TemplateTwig
-Module Wordpress for dependancy
+# Wordpress Template - Twig
+Module Wordpress
 
 # Load config
 ```php
+$TWIG = null;
 add_action('plugins_loaded', function() {
     global $loader, $TWIG;
     if (!$loader instanceof Twig_Loader_Filesystem) { return; }
@@ -20,13 +21,15 @@ add_action('plugins_loaded', function() {
 
 # for use
 ```php
-global $TWIG;
+function render_shortcode() {
+    global $TWIG;
 
-/* more... */
+    /* more... */
 
-return $TWIG->render('@front/form.html', array(
-  'nonce' => wp_nonce_field('thumbnail_upload', 'thumbnail_upload_nonce'),
-  'post_id' => $post_id,
-  'name' => $labelname
-));
+    return $TWIG->render('@front/form.html', array(
+      'nonce' => wp_nonce_field('thumbnail_upload', 'thumbnail_upload_nonce'),
+      'post_id' => $post_id,
+      'name' => $labelname
+    ));
+}
 ```
