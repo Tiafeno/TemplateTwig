@@ -1,11 +1,11 @@
 <?php
 /*
-  Plugin Name: FALI. Engine TWIG
-  Plugin URI: http://URI_Of_Page_Describing_Plugin_and_Updates
-  Description: A brief description of the Plugin.
-  Version: 1.0
-  Author: Tiafeno
-  Author URI: http://tiafenofinel.falicrea.com
+  Plugin Name: WP Engine TWIG
+  Plugin URI: https://twig.symfony.com/doc/1.x/
+  Description: If you have any exposure to other text-based template languages, such as Smarty, Django, or Jinja, you should feel right at home with Twig. It's both designer and developer friendly by sticking to PHP's principles and adding functionality useful for templating environments.
+  Version: 1.27
+  Author: Tiafeno Finel
+  Author URI: http://www.falicrea.com
   License: A "Slug" license name e.g. GPL2
  */
  
