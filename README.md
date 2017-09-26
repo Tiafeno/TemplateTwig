@@ -11,8 +11,9 @@ add_action('plugins_loaded', function() {
     if (!defined( 'TWIG_ENGINE_PATH' )) {
         define('TWIG_ENGINE_PATH', plugin_dir_path( __FILE__ ) . '/engine/Twig');
     }
-    $loader->addPath(TWIG_ENGINE_PATH . '/templates/front', 'front');
-    $loader->addPath(TWIG_ENGINE_PATH . '/templates/admin', 'admin');
+    /* $loader->addPath(TWIG_ENGINE_PATH . '/templates/front', 'front'); 
+       $loader->addPath(TWIG_ENGINE_PATH . '/templates/admin', 'admin'); */
+    $loader->addPath(TWIG_ENGINE_PATH . '/templates/partials', 'partials');
     $TWIG = new Twig_Environment($loader, array(
         'debug' => true,
         'cache' => TWIG_ENGINE_PATH . '/template_cache'
