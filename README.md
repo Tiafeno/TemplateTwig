@@ -30,11 +30,11 @@ add_action('plugins_loaded', function() {
 # for use
 ```php
 function render_shortcode() {
-    global $TWIG;
+    global $twig;
 
     /* more... */
-
-    return $TWIG->render('@front/form.html', array(
+    
+    return $twig->render('@front/form.html', array(
       'nonce' => wp_nonce_field('thumbnail_upload', 'thumbnail_upload_nonce'),
       'post_id' => $post_id,
       'name' => $labelname
