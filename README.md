@@ -19,7 +19,7 @@ add_action('plugins_loaded', function() {
   /* $loader->addPath(TWIG_ENGINE_PATH . '/templates/front', 'front'); 
      $loader->addPath(TWIG_ENGINE_PATH . '/templates/admin', 'admin'); */
   $loader->addPath(TWIG_ENGINE_PATH . '/templates/partials', 'partials');
-  if (!is_null( $twig )) exit( 'Twig template not install or inactivate' );
+  if (!is_null( $twig )) exit( 'Twig template is already define' );
   $twig = new \Twig_Environment($loader, array(
     'debug' => true,
     'cache' => ADVERT_TWIG_ENGINE_PATH . '/template_cache'
